@@ -52,3 +52,6 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+.vs/CatanMapGenerator/CopilotIndices
+.vs/CatanMapGenerator.slnx/DesignTimeBuild
+.vs/CatanMapGenerator.slnx/FileContentIndex
