@@ -1,4 +1,4 @@
-namespace CatanMapGenerator
+namespace CatanMapGenerator.Code
 {
     internal static class Program
     {
