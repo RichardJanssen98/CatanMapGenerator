@@ -28,6 +28,11 @@ namespace CatanMapGenerator
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         public void Regenerate(object sender, System.EventArgs e)
         {
             InitializeBoard();
@@ -219,11 +224,6 @@ namespace CatanMapGenerator
             {
                 Debug.WriteLine("Warning: Could not generate a valid board without adjacent 6s or 8s.");
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
