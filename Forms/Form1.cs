@@ -81,19 +81,25 @@ namespace CatanMapGenerator
             return false;
         }
 
-
+        private void AddResourceToList(List<ResourceType> resourcesList, ResourceType type, int amount)
+        {
+            for (int i = 0; i < amount; i++)
+            {
+                resourcesList.Add(type);
+            }
+        }
 
         private List<ResourceType> GenerateResourceTypes(bool isDesertCentered)
         {
-            List<ResourceType> resources = new List<ResourceType>
-            {
-                ResourceType.Wood, ResourceType.Wood, ResourceType.Wood, ResourceType.Wood,
-                ResourceType.Brick, ResourceType.Brick, ResourceType.Brick,
-                ResourceType.Wheat, ResourceType.Wheat, ResourceType.Wheat, ResourceType.Wheat,
-                ResourceType.Ore, ResourceType.Ore, ResourceType.Ore,
-                ResourceType.Wool, ResourceType.Wool, ResourceType.Wool, ResourceType.Wool,
-                ResourceType.Desert
-            };
+            List<ResourceType> resources = new List<ResourceType>();
+
+            AddResourceToList(resources, ResourceType.Wood, int.Parse(textBox_WoodAmount.Text));
+            AddResourceToList(resources, ResourceType.Wheat, int.Parse(textBox_WheatAmount.Text));
+            AddResourceToList(resources, ResourceType.Wool, int.Parse(textBox_WoolAmount.Text));
+            AddResourceToList(resources, ResourceType.Brick, int.Parse(textBox_BrickAmount.Text));
+            AddResourceToList(resources, ResourceType.Ore, int.Parse(textBox_OreAmount.Text));
+            AddResourceToList(resources, ResourceType.Desert, 1);
+
             Shuffle(resources);
 
             if (isDesertCentered)
